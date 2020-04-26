@@ -4,7 +4,7 @@ public class InitializationOrder {
 	private String name = "Torchie";
 	{System.out.println(name);}
 	
-	private static int COUNT = 0;
+	private static int COUNT;
 	static { System.out.println(COUNT);}
 	
 	{
