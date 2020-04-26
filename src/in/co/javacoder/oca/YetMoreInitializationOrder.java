@@ -2,24 +2,24 @@ package in.co.javacoder.oca;
 
 public class YetMoreInitializationOrder extends YetMoreInitializationOrderSuper {
 	
-	static { add(2); }
+	static { add(2); }  // 2
 	
 	static void add(int num) { System.out.print(num + " "); }
 	
 	public YetMoreInitializationOrder() {
-		add(5);
+		add(5);  // 10
 	}
 	
-	static { add(4); }
+	static { add(4); }  // 3
 	
-	{ add(6); }
+	{ add(6); } // 8
 	
-	static { add(7); }
+	static { add(7); }  // 4
 	
-	{ add(8); }
+	{ add(8); } // 9
 
 	public static void main(String[] args) {
-		add(9);
+		add(9);  // 5
 		
 		new YetMoreInitializationOrder();
 		
